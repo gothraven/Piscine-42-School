@@ -1,0 +1,8 @@
+Credentials cache: API:7E97AACE-888F-43A3-9BA7-A75826D45494
+        Principal: szaghban@42.FR
+
+  Issued                Expires               Principal
+Jul  3 12:29:19 2017  Jul 10 12:29:19 2017  krbtgt/42.FR@42.FR
+Jul  3 12:29:20 2017  Jul 10 12:29:19 2017  ldap/ldap-proxy.42.fr@42.FR
+Jul  3 12:29:21 2017  Jul 10 12:29:19 2017  HTTP/home-piscine.42.fr@42.FR
+Jul  3 13:09:10 2017  Jul 10 12:29:19 2017  host/vgs-fn1.42.fr@42.FR
