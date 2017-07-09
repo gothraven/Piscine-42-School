@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/08 05:34:12 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/08 06:24:44 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/09 20:40:42 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	rush(int x, int y);
 
-int		main()
+int		main(void)
 {
-	rush(123, 42);
+	rush(1, 5);
 	return (0);
 }
