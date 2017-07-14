@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_destroy.c                                       :+:      :+:    :+:   */
+/*   ft_active_bits.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/14 00:41:59 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/14 15:18:16 by szaghban         ###   ########.fr       */
+/*   Created: 2017/07/14 15:01:05 by szaghban          #+#    #+#             */
+/*   Updated: 2017/07/14 15:11:35 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "ft_ultimator.h"
-
-void	ft_destroy(char ***factory)
+unsigned int	ft_active_bits(int value)
 {
-	int i;
-	int j;
+	unsigned int	result;
+	unsigned int	i;
 
 	i = 0;
-	while (factory[i])
+	result = 0;
+	while (i < 32)
 	{
-		j = 0;
-		while (factory[i][j])
-		{
-			free(factory[i][j]);
-			j++;
-		}
-		free(factory[i]);
+		if ((value & 1) == 1)
+			result++;
+		value = value >> 1;
 		i++;
 	}
-	free(factory);
+	return (result);
 }

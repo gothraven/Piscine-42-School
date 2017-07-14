@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_destroy.c                                       :+:      :+:    :+:   */
+/*   ft_door.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/14 00:41:59 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/14 15:18:16 by szaghban         ###   ########.fr       */
+/*   Created: 2017/07/14 13:54:49 by szaghban          #+#    #+#             */
+/*   Updated: 2017/07/14 14:06:19 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "ft_ultimator.h"
+#ifndef FT_DOOR_H
+#define FT_DOOR_H
 
-void	ft_destroy(char ***factory)
-{
-	int i;
-	int j;
+#include <unistd.h>
 
-	i = 0;
-	while (factory[i])
-	{
-		j = 0;
-		while (factory[i][j])
-		{
-			free(factory[i][j]);
-			j++;
-		}
-		free(factory[i]);
-		i++;
-	}
-	free(factory);
-}
+#define OPEN 1
+#define CLOSE 0
+
+typedef struct door {
+	int state;
+} t_door;
+
+#endif

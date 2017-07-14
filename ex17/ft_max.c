@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_destroy.c                                       :+:      :+:    :+:   */
+/*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/14 00:41:59 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/14 15:18:16 by szaghban         ###   ########.fr       */
+/*   Created: 2017/07/14 14:07:45 by szaghban          #+#    #+#             */
+/*   Updated: 2017/07/14 14:14:38 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "ft_ultimator.h"
-
-void	ft_destroy(char ***factory)
+int		ft_max(int *tab, int length)
 {
+	int max;
 	int i;
-	int j;
 
 	i = 0;
-	while (factory[i])
+	max = tab[i];
+	while (i < length)
 	{
-		j = 0;
-		while (factory[i][j])
-		{
-			free(factory[i][j]);
-			j++;
-		}
-		free(factory[i]);
+		if (tab[i] > max)
+			max = tab[i];
 		i++;
 	}
-	free(factory);
+	return (max);
 }

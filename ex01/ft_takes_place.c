@@ -6,12 +6,11 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/13 20:10:29 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/13 21:45:19 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/14 14:42:34 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <unistd.h>
 
 void	ft_takes_place(int hour)
 {
