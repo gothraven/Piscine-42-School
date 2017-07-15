@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 18:22:55 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/15 21:15:20 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/15 22:05:04 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		find_solution(int position, char **sudoku)
 {
 	int i;
 	int j;
-	int k;
+	char k;
 
 	if (position == (SIZE * SIZE))
 	{
@@ -28,12 +28,12 @@ int		find_solution(int position, char **sudoku)
 		return find_solution(position + 1, sudoku);
 	else
 	{
-		k = 1;
-		while (k <= 9)
+		k = '1';
+		while (k <= '9')
 		{
-			if(is_possible(k + '0', i, j, sudoku))
+			if(is_possible(k, i, j, sudoku))
 			{
-				sudoku[i][j] = k + '0';
+				sudoku[i][j] = k;
 				if (find_solution(position + 1, sudoku) == 1)
 					return 1;
 			}
