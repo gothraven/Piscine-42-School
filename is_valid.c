@@ -1,58 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   is_valid.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/15 15:04:36 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/15 17:51:33 by szaghban         ###   ########.fr       */
+/*   Created: 2017/07/15 17:07:47 by szaghban          #+#    #+#             */
+/*   Updated: 2017/07/15 17:56:46 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
+#include "sudoku.h"
 
-#include "libstr.h"
 
-int		ft_putchar(char c)
-{
-	write(1, &c, 1);
-	return (0);
-}
-
-void	ft_putstr(char *str)
+int		is_valid(char **sudoku)
 {
 	int i;
-
+	int j;
+	int test;
+	
 	i = 0;
-	while (str[i])
+	while (sudoku[i])
 	{
-		ft_putchar(str[i]);
+		j = 0;
+		while (sudoku[i][j])
+		{
+			if (sudoku[i][j] != '.')
+				if (!(not_in_square(sudoku[i][j], i, j, sudoku)
+					&& not_in_row(sudoku[i][j], i, j, sudoku)
+					&& not_in_col(sudoku[i][j], i, j, sudoku)))
+					return (0);
+			j++;
+		}
 		i++;
 	}
-}
-
-int		ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char    **copy_array(char **str)
-{
-	int i;
-	int index;
-
-	i = 1;
-	index = 0;
-	while (str[i])
-	{
-		str[index] = str[i];
-		i++;
-		index++;
-	}
-	str[index] = 0;
-	return str;
+	return (1);
 }
