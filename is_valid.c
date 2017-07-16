@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 17:07:47 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/16 16:18:55 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/16 18:00:13 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,3 +58,23 @@ int		is_sudoku(char **argv)
 	}
 	return (1);
 }
+
+int		is_same_solution(char **sudoku1, char **sudoku2)
+{
+	int i;
+	int j;
+
+	i = 0;
+	while (i < SIZE)
+	{
+		j = 0;
+		while (j < SIZE)
+		{
+			if (sudoku1[i][j] != sudoku2[i][j])
+				return (0);
+			j++;
+		}
+		i++;
+	}
+	return (1);
+
