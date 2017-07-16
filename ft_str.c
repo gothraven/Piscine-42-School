@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 15:04:36 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/15 17:51:33 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/16 15:58:49 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		ft_strlen(char *str)
 	return (i);
 }
 
-char    **copy_array(char **str)
+char	**copy_array(char **str)
 {
 	int i;
 	int index;
@@ -54,5 +54,5 @@ char    **copy_array(char **str)
 		index++;
 	}
 	str[index] = 0;
-	return str;
+	return (str);
 }

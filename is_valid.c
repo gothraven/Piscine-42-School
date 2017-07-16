@@ -6,18 +6,17 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 17:07:47 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/15 20:37:44 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/16 15:59:59 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include "sudoku.h"
 
+#include "sudoku.h"
 
 int		is_valid(char **sudoku)
 {
 	int i;
 	int j;
-	
+
 	i = 0;
 	while (sudoku[i])
 	{

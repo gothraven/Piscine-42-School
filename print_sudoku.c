@@ -6,12 +6,12 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 17:46:25 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/15 17:59:05 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/16 16:02:35 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libstr.h"
 #include "sudoku.h"
-
 
 void	print_sudoku(char **sudoku)
 {
@@ -29,7 +29,7 @@ void	print_sudoku(char **sudoku)
 				ft_putchar(' ');
 			j++;
 		}
-			ft_putchar('\n');
+		ft_putchar('\n');
 		i++;
 	}
 }

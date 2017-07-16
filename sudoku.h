@@ -6,14 +6,14 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 16:03:21 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/15 20:54:56 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/16 16:04:14 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SUDOKU_H
-#define SUDOKU_H
+# define SUDOKU_H
 
-#define SIZE 9
+# define SIZE 9
 
 void	print_sudoku(char **sudoku);
 

@@ -6,14 +6,14 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 15:05:00 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/15 15:27:04 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/16 16:03:57 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBSTR_H
-#define LIBSTR_H
+# define LIBSTR_H
 
-#include <unistd.h>
+# include <unistd.h>
 
 int		ft_putchar(char c);
 void	ft_putstr(char *str);
