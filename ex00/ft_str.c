@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 15:04:36 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/16 17:59:15 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/16 22:06:37 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,14 @@ char	**create_copy(char **argv)
 
 	i = 0;
 	copy = malloc((SIZE + 1) * sizeof(char **));
+	if (!copy)
+		return (0);
 	while (i < SIZE)
 	{
 		j = 0;
 		copy[i] = malloc((SIZE + 1) * sizeof(char*));
+		if (!copy[i])
+			return (0);
 		while (j < SIZE)
 		{
 			copy[i][j] = argv[i][j];
