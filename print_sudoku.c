@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 17:46:25 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/16 16:02:35 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/16 18:15:21 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	print_sudoku(char **sudoku)
 		while (sudoku[i][j])
 		{
 			ft_putchar(sudoku[i][j]);
-			if (j != 9)
+			if (j != SIZE-1)
 				ft_putchar(' ');
 			j++;
 		}
