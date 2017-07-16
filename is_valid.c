@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 17:07:47 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/16 18:00:13 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/16 18:03:22 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,4 @@ int		is_same_solution(char **sudoku1, char **sudoku2)
 		i++;
 	}
 	return (1);
-
+}
