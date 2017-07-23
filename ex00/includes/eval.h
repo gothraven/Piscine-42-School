@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/21 23:01:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 20:52:02 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/23 21:09:31 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,10 @@ int		ft_digits(void);
 int		ft_number(void);
 int		ft_level2(void);
 int		ft_level1(void);
-int		ft_atoi(char *str);
 void	ft_nbr(long nb);
 void	ft_putnbr(int nb);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
-char	*ft_strdup(char *src);
 int		ft_strlen(char *str);
 
 #endif
