@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/21 23:01:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 20:29:28 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/23 22:49:01 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 # include <sys/types.h>
 # include <sys/uio.h>
 
