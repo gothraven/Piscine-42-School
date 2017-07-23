@@ -6,7 +6,7 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/19 04:20:22 by szaghban          #+#    #+#              #
-#    Updated: 2017/07/23 20:34:27 by szaghban         ###   ########.fr        #
+#    Updated: 2017/07/23 22:44:37 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ BINS = $(patsubst %,%.o,$(FUNS))
 all: $(NAME)
 
 $(BINS):
-	@cc $(INCF) $(FLAGS) -c $(patsubst %.o,$(SRC)%.c,$@)
+	@gcc $(INCF) $(FLAGS) -c $(patsubst %.o,$(SRC)%.c,$@)
 
 $(NAME): $(BINS)
 	@gcc $(INCF) $(FLAGS) main.c $(BINS) -o $(NAME)
