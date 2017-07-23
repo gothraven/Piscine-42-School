@@ -6,7 +6,7 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/19 04:20:22 by szaghban          #+#    #+#              #
-#    Updated: 2017/07/23 04:24:22 by szaghban         ###   ########.fr        #
+#    Updated: 2017/07/23 20:51:43 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME := eval_expr
 SRC := src/
 INCLUDES := includes/
 CACHE := cache/
-FUNS := eval_expr ft_atoi ft_putnbr ft_putstr ft_strdup ft_strlen
+FUNS := eval_expr ft_atoi ft_putnbr ft_putstr ft_strdup ft_strlen \
+	ft_init
 FLAGS := -Wall -Wextra -Werror
 INCF = -I $(INCLUDES)
 BINS = $(patsubst %,%.o,$(FUNS))

@@ -6,29 +6,24 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/21 23:01:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 04:14:31 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/23 20:52:02 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef EVAL_H
-#define EVAL_H
+# define EVAL_H
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h> // remove it later
 
 # define ERROR "PROBLEM - THAT IS NOT A NUMBER"
-//needed functions
+
 int		eval_expr(char *str);
 char	*ft_init(char *str);
-
-int		ft_digits(char *str);
-int		ft_number(char *str);
-int		ft_leveltwo(char *str);
-int		ft_levelone(char *str);
-int		ft_formula(char *str);
-
-//my lib
+int		ft_digits(void);
+int		ft_number(void);
+int		ft_level2(void);
+int		ft_level1(void);
 int		ft_atoi(char *str);
 void	ft_nbr(long nb);
 void	ft_putnbr(int nb);

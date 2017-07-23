@@ -6,123 +6,93 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/21 22:59:14 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 04:15:31 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/23 20:58:43 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "eval.h"
 
-char	*ft_init(char *str)
-{
-	int i;
-	int index;
+char		*g_formula;
 
-	i = 0;
-	index = 0;
-	while (str[i])
-	{
-		if (str[i] != ' ')
-		{
-			str[index] = str[i];
-			index++;
-		}
-		i++;
-	}
-	str[index] = '\0';
-	return (str);
-}
-
-int		ft_digits(char *formula)
+int			ft_digits(void)
 {
 	int result;
 
 	result = 0;
-	while (*formula >= '0' && *formula <= '9')
+	while (*g_formula >= '0' && *g_formula <= '9')
 	{
-		result = (result *  10) + (*formula - '0');
-		formula++;
+		result = (result * 10) + (*g_formula - '0');
+		++g_formula;
 	}
 	return (result);
 }
 
-int		ft_number(char *formula)
+int			ft_number(void)
 {
 	int number;
 
-	if (*formula >= '0' && *formula<= '9')
+	if (*g_formula >= '0' && *g_formula <= '9')
 	{
-		number = ft_digits(formula);
+		number = ft_digits();
 		return (number);
 	}
-	else if (*formula == '(')
+	else if (*g_formula == '(')
 	{
-		formula++; //ignore '('
-		number = ft_levelone(formula);
-		printf("%d\n", number);
-		formula++; //ignore ')'
-		return number;
+		++g_formula;
+		number = ft_level1();
+		++g_formula;
+		return (number);
 	}
 	write(1, ERROR, ft_strlen(ERROR));
 	return (0);
 }
 
-int		leveltwo(char *formula)
+int			level2(void)
 {
 	int		nbr1;
 	int		nbr2;
 	char	op;
 
-	nbr1 = ft_number(formula);
-	formula++;
-	op = *formula;
+	nbr1 = ft_number();
+	op = *g_formula;
 	while (op == '*' || op == '/' || op == '%')
 	{
-		formula++; //pass the operation
-		nbr2 = ft_number(formula);
+		g_formula++;
+		nbr2 = ft_number();
 		if (op == '*')
 			nbr1 = nbr1 * nbr2;
 		else if (op == '/')
 			nbr1 = nbr1 / nbr2;
 		else if (op == '%')
 			nbr1 = nbr1 % nbr2;
-		formula++;
-		op = *formula;
+		op = *g_formula;
 	}
 	return (nbr1);
 }
 
-int		ft_levelone(char *formula)
+int			ft_level1(void)
 {
 	int		nbr1;
 	int		nbr2;
 	char	op;
 
-	nbr1 = leveltwo(formula);
-	formula++;
-	op = *formula;
+	nbr1 = level2();
+	op = *g_formula;
 	while (op == '+' || op == '-')
 	{
-		formula++;
-		nbr2 = leveltwo(formula);
+		++g_formula;
+		nbr2 = level2();
 		if (op == '+')
 			nbr1 = nbr1 + nbr2;
 		else if (op == '-')
 			nbr1 = nbr1 - nbr2;
-		formula++;
-		op = *formula;
+		op = *g_formula;
 	}
 	return (nbr1);
 }
 
-int		ft_formula(char *formula)
+int			eval_expr(char *str)
 {
-	return (ft_levelone(formula));
-}
-
-int		eval_expr(char *str)
-{
-	char	*formula;
-
-	formula = ft_init(str);
-	return (ft_formula(formula));
+	g_formula = ft_init(str);
+	return (ft_level1());
 }
