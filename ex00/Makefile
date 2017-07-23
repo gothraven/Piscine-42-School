@@ -6,7 +6,7 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/19 04:20:22 by szaghban          #+#    #+#              #
-#    Updated: 2017/07/23 19:08:44 by szaghban         ###   ########.fr        #
+#    Updated: 2017/07/23 19:34:29 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,5 +40,5 @@ fclean: clean
 
 re: fclean all
 
-norme:
-	@norminette
+norme: fclean
+	@norminette */*.c */*.h

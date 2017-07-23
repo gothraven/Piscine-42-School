@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/23 19:11:11 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 19:11:15 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/23 19:28:10 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int		main(void)
 	char	*buffer;
 	int		size;
 
-	buffer = malloc(BUFF_SIZE * sizeof(char*));
+	buffer = (char*)malloc(BUFFSIZE * sizeof(char*));
 	if (buffer == NULL)
 		return (0);
-	size = read(0, buffer, BUFF_SIZE);
+	size = read(0, buffer, BUFFSIZE);
 	buffer[size] = '\0';
 	if (size <= 1)
 		ft_putstr("aucune");

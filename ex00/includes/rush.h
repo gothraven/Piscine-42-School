@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/21 23:01:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 19:19:57 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/23 19:27:58 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 # define COLLE3 "[colle-03]"
 # define COLLE4 "[colle-04]"
 
-# define BUFF_SIZE 2147483646
+# define BUFFSIZE 2147483646
 
 void	ft_number(long nb);
 void	ft_putnbr(int nb);
