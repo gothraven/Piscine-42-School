@@ -6,7 +6,7 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/19 04:20:22 by szaghban          #+#    #+#              #
-#    Updated: 2017/07/23 19:34:29 by szaghban         ###   ########.fr        #
+#    Updated: 2017/07/23 20:34:27 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRC := src/
 INCLUDES := includes/
 CACHE := cache/
 FUNS := ft_putnbr ft_putstr ft_strlen is_colle01 is_colle02 is_colle03 \
-	is_colle04 is_colle00 dimensions cases rush ft_strcmp
+	is_colle04 is_colle00 dimensions cases rush ft_strcmp ft_strcat
 FLAGS := -Wall -Wextra -Werror
 INCF = -I $(INCLUDES)
 BINS = $(patsubst %,%.o,$(FUNS))

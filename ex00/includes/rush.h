@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/21 23:01:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 19:27:58 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/23 20:29:28 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,15 @@
 # define COLLE3 "[colle-03]"
 # define COLLE4 "[colle-04]"
 
-# define BUFFSIZE 2147483646
+# define TMPSIZE 1000
+# define BUFFSIZE 2000000000
 
 void	ft_number(long nb);
 void	ft_putnbr(int nb);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
 char	*no_newline(char *str);
+char	*ft_strcat(char *dest, char *src);
 int		ft_strlen(char *str);
 int		ft_strcmp(char *s1, char *s2);
 int		rush(char *buff, int size);
