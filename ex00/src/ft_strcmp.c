@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/05 12:42:04 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 13:47:18 by szaghban         ###   ########.fr       */
+/*   Created: 2017/07/12 15:47:14 by szaghban          #+#    #+#             */
+/*   Updated: 2017/07/23 18:57:48 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush.h"
 
-#define ABS(x) (x < 0 ? -x : x)
-
-void	ft_number(long nb)
+int		ft_strcmp(char *s1, char *s2)
 {
-	if (nb / 10 > 0)
-		ft_number(nb / 10);
-	ft_putchar(nb % 10 + '0');
-}
+	int i;
 
-void	ft_putnbr(int nb)
-{
-	if (nb < 0)
-		ft_putchar('-');
-	ft_number(ABS((long)nb));
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	if (!s1[i] && !s2[i])
+		return (0);
+	else
+		return ((int)(s1[i] - s2[i]));
 }

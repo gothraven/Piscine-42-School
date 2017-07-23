@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   rush.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/05 12:42:04 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 13:47:18 by szaghban         ###   ########.fr       */
+/*   Created: 2017/07/23 18:25:54 by szaghban          #+#    #+#             */
+/*   Updated: 2017/07/23 18:32:55 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush.h"
 
-#define ABS(x) (x < 0 ? -x : x)
-
-void	ft_number(long nb)
+int		rush(char *buffer, int size)
 {
-	if (nb / 10 > 0)
-		ft_number(nb / 10);
-	ft_putchar(nb % 10 + '0');
-}
+	int iscol[5];
+	int ligne;
+	int col;
 
-void	ft_putnbr(int nb)
-{
-	if (nb < 0)
-		ft_putchar('-');
-	ft_number(ABS((long)nb));
+	dimensions(buffer, size, &ligne, &col);
+	buffer = no_newline(buffer);
+	iscol[0] = is_colle00(buffer, ligne, col);
+	iscol[1] = is_colle01(buffer, ligne, col);
+	iscol[2] = is_colle02(buffer, ligne, col);
+	iscol[3] = is_colle03(buffer, ligne, col);
+	iscol[4] = is_colle04(buffer, ligne, col);
+	return (firstcases(iscol, ligne, col));
 }
