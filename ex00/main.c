@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/23 19:11:11 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 20:32:08 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/23 22:47:30 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		main(void)
 	int		size;
 	char	*tmp;
 
-	if (!(tmp =(char*)malloc((TMPSIZE + 1)* sizeof(char))))
+	if (!(tmp = (char*)malloc((TMPSIZE + 1) * sizeof(char))))
 		return (0);
 	if (!(buffer = (char*)malloc(BUFFSIZE * sizeof(char))))
 		return (0);
