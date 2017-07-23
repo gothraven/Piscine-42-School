@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/21 23:01:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 18:57:51 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/23 19:19:57 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
+# include <sys/types.h>
+# include <sys/uio.h>
 
 # define COLLE0 "[colle-00]"
 # define COLLE1 "[colle-01]"
@@ -29,7 +32,6 @@ void	ft_putnbr(int nb);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
 char	*no_newline(char *str);
-char	*ft_strdup(char *src);
 int		ft_strlen(char *str);
 int		ft_strcmp(char *s1, char *s2);
 int		rush(char *buff, int size);

@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/23 14:39:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 18:55:37 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/23 19:13:25 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,11 @@ int		is_colle01(char *buff, int lignes, int col)
 
 	shape = colle01(lignes, col);
 	if (ft_strcmp(shape, buff))
+	{
+		free(shape);
 		return (0);
+	}
+	free(shape);
 	return (1);
 }
 
