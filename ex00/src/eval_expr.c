@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/21 22:59:14 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 02:27:19 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/23 04:15:31 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,23 @@ int		ft_digits(char *formula)
 
 int		ft_number(char *formula)
 {
+	int number;
+
 	if (*formula >= '0' && *formula<= '9')
 	{
-		return ft_digits(str);
+		number = ft_digits(formula);
+		return (number);
 	}
 	else if (*formula == '(')
 	{
 		formula++; //ignore '('
-		return ft_levelone(str);
+		number = ft_levelone(formula);
+		printf("%d\n", number);
+		formula++; //ignore ')'
+		return number;
 	}
+	write(1, ERROR, ft_strlen(ERROR));
+	return (0);
 }
 
 int		leveltwo(char *formula)
@@ -65,6 +73,7 @@ int		leveltwo(char *formula)
 	char	op;
 
 	nbr1 = ft_number(formula);
+	formula++;
 	op = *formula;
 	while (op == '*' || op == '/' || op == '%')
 	{
@@ -76,6 +85,8 @@ int		leveltwo(char *formula)
 			nbr1 = nbr1 / nbr2;
 		else if (op == '%')
 			nbr1 = nbr1 % nbr2;
+		formula++;
+		op = *formula;
 	}
 	return (nbr1);
 }
@@ -87,6 +98,7 @@ int		ft_levelone(char *formula)
 	char	op;
 
 	nbr1 = leveltwo(formula);
+	formula++;
 	op = *formula;
 	while (op == '+' || op == '-')
 	{
@@ -96,6 +108,8 @@ int		ft_levelone(char *formula)
 			nbr1 = nbr1 + nbr2;
 		else if (op == '-')
 			nbr1 = nbr1 - nbr2;
+		formula++;
+		op = *formula;
 	}
 	return (nbr1);
 }

@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/21 23:01:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/23 01:33:16 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/23 04:14:31 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,15 @@
 # include <stdlib.h>
 # include <stdio.h> // remove it later
 
+# define ERROR "PROBLEM - THAT IS NOT A NUMBER"
 //needed functions
 int		eval_expr(char *str);
 char	*ft_init(char *str);
-int		ft_sum(char *str);
+
+int		ft_digits(char *str);
+int		ft_number(char *str);
+int		ft_leveltwo(char *str);
+int		ft_levelone(char *str);
 int		ft_formula(char *str);
 
 //my lib
