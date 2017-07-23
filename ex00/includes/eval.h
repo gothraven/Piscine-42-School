@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/21 23:01:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/21 23:11:39 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/23 01:33:16 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,17 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h> // remove it later
 
+//needed functions
 int		eval_expr(char *str);
+char	*ft_init(char *str);
+int		ft_sum(char *str);
+int		ft_formula(char *str);
+
+//my lib
 int		ft_atoi(char *str);
-void	ft_number(long nb);
+void	ft_nbr(long nb);
 void	ft_putnbr(int nb);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
