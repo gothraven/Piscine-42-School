@@ -6,7 +6,7 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/19 04:20:22 by szaghban          #+#    #+#              #
-#    Updated: 2017/07/25 00:02:22 by szaghban         ###   ########.fr        #
+#    Updated: 2017/07/25 06:42:45 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME := bsq
 SRC := src/
 INCLUDES := includes/
 CACHE := cache/
-FUNS := 
+FUNS := bsq getnextline
 MAIN := main.c
 FLAGS := -Wall -Wextra -Werror
 INCF = -I $(INCLUDES)
