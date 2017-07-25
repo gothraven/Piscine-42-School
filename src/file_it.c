@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 08:21:41 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/25 08:26:15 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/25 09:56:27 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,17 @@
 
 int		open_it(char *fname)
 {
-	return open(fname, O_RDONLY);
+	int fd;
+
+	if ((fd =open(fname, O_RDONLY) == -1))
+		printf("Error: open (%s)\n", fname);
+	return (fd);
 }
 
-int		close_it(int fd);
+int		close_it(int fd)
 {
-	return close(fd);
+	if (close(fd) == -1)
+		return (0);
+	else
+		return (1);
 }
