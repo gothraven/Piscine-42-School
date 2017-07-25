@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 00:02:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/25 00:06:00 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/25 02:58:59 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,18 @@
 
 # define BUFFSIZE 2147483647
 # define TMPSIZE 1000
+
+typedef struct	s_square
+{
+	int			size;
+	int			x;
+	int			y;
+}				t_square;
+
+typedef struct	s_obst
+{
+	int			x;
+	int			y;
+}				t_obst;
 
 #endif
