@@ -6,13 +6,13 @@
 /*   By: anyahyao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 09:43:48 by anyahyao          #+#    #+#             */
-/*   Updated: 2017/07/25 10:07:59 by anyahyao         ###   ########.fr       */
+/*   Updated: 2017/07/25 10:13:15 by anyahyao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-int		show_it(t_square *s, t_obst *l, t_map m)
+int		show_it(t_square *s, t_obst *l, t_map *m)
 {
 	int		i;
 	int		j;
@@ -20,7 +20,6 @@ int		show_it(t_square *s, t_obst *l, t_map m)
 
 	str = malloc(sizeof(char) * (m->width + 2));
 	i = 0;
-	j = 0;
 	while (i < m->height)
 	{
 		j = 0;
@@ -28,8 +27,8 @@ int		show_it(t_square *s, t_obst *l, t_map m)
 		{
 			if (l->x == j && l->y == i)
 				str[j] = m->obst;
-			else if ((i > s->y - size && i < s->y + size) &&
-					(j > s->x - size && j < s->j + size))
+			else if ((i > s->y - s->size && i < s->y + s->size) &&
+					(j > s->x - s->size && j < s->x + s->size))
 				str[j] = m->full;
 			else
 				str[j] = m->empty;
