@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 00:02:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/25 07:32:42 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/25 08:03:40 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,10 @@ typedef struct	s_square
 
 typedef struct	s_obst
 {
-	int			x;
-	int			y;
-}				t_obst;
+	struct s_obst		*next;
+	int					x;
+	int					y;
+}						t_obst;
 
 void			ft_putchar(char c);
 void			ft_putstr(char *str);
