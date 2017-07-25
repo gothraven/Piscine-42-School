@@ -6,12 +6,13 @@
 /*   By: anyahyao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 09:26:26 by anyahyao          #+#    #+#             */
-/*   Updated: 2017/07/25 09:26:40 by anyahyao         ###   ########.fr       */
+/*   Updated: 2017/07/25 09:34:16 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "bsq.h"
 
-int		verify_it(char *str, t_map map)
+int		verify_it(char *str, t_map *map)
 {
 	int i;
 

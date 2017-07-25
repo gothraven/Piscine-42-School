@@ -6,13 +6,13 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 08:18:39 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/25 09:27:14 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/25 09:35:20 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-int			read_it(int fname, t_obst **list, t_map *map)
+int			read_it(char *fname, t_obst **list, t_map *map)
 {
 	char		*str;
 	int			i;

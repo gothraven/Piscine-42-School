@@ -6,7 +6,7 @@
 /*   By: anyahyao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 07:40:42 by anyahyao          #+#    #+#             */
-/*   Updated: 2017/07/25 09:13:34 by anyahyao         ###   ########.fr       */
+/*   Updated: 2017/07/25 09:39:17 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ t_square	*ft_find_bis(t_obst **list, int *t1, int *t2, t_square *res)
 	return (res);
 }
 
-t_square	*ft_find(t_obst **l, int *t1, int *t2, t_square *res)
+int			find_it(t_obst **l, int *t1, int *t2, t_square *res)
 {
 	int		i;
 	int		j;
@@ -91,5 +91,6 @@ t_square	*ft_find(t_obst **l, int *t1, int *t2, t_square *res)
 		t1[list->x] = 0;
 		list = list->next;
 	}
-	return (ft_find_bis(&list, t1, t2, res));
+	ft_find_bis(&list, t1, t2, res);
+	return (res->size);
 }

@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 00:02:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/25 09:26:24 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/25 09:42:35 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,16 @@ typedef struct		s_map
 	char	full;
 }					t_map;
 
+int				show_it(t_square *square, t_obst *list, t_map *map);
+int				find_it(t_obst **list, int *t1, int *t2, t_square *square);
+int				verify_it(char *str, t_map *map);
 t_obst			*ft_create_elem(int x, int y);
 void			push_in(t_obst **list, int x, int y);
 void			convert_it(t_obst **list, char *str, int x, char obst);
 void			map_it(t_map *map, char *str);
 int				read_it(char *fname, t_obst **list, t_map *map);
 int				close_it(int fd);
-int				open_it(char fname);
+int				open_it(char *fname);
 void			ft_putchar(char c);
 void			ft_putstr(char *str);
 char			*get_next_line(const int fd);
