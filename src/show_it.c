@@ -6,7 +6,7 @@
 /*   By: anyahyao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 09:43:48 by anyahyao          #+#    #+#             */
-/*   Updated: 2017/07/25 10:13:15 by anyahyao         ###   ########.fr       */
+/*   Updated: 2017/07/25 23:36:52 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int		show_it(t_square *s, t_obst *l, t_map *m)
 	int		j;
 	char	*str;
 
+	printf("x=%d y= %d  size=%d\n",s->x,s->y , s->size);
 	str = malloc(sizeof(char) * (m->width + 2));
 	i = 0;
 	while (i < m->height)
@@ -26,9 +27,12 @@ int		show_it(t_square *s, t_obst *l, t_map *m)
 		while (j < m->width)
 		{
 			if (l->x == j && l->y == i)
+			{
 				str[j] = m->obst;
-			else if ((i > s->y - s->size && i < s->y + s->size) &&
-					(j > s->x - s->size && j < s->x + s->size))
+				l = l->next;
+			}
+			else if ((i > s->y - s->size && i <= s-> y) &&
+					(j > s->x - s->size && j <= s->x))
 				str[j] = m->full;
 			else
 				str[j] = m->empty;

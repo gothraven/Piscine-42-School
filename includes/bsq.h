@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 00:02:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/25 10:09:23 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 01:57:33 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ typedef struct	s_square
 
 typedef struct	s_obst
 {
-	struct s_obst		*next;
 	int					x;
 	int					y;
+	struct s_obst		*next;
 }						t_obst;
 
 typedef struct		s_map
@@ -44,6 +44,7 @@ typedef struct		s_map
 	char	full;
 }					t_map;
 
+void			push_in(t_obst **list, int x, int y);
 int				solve_it(char *fname);
 void			map_it(t_map *map, char *str);
 int				show_it(t_square *square, t_obst *list, t_map *map);

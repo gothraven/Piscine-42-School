@@ -6,7 +6,7 @@
 /*   By: anyahyao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 07:40:42 by anyahyao          #+#    #+#             */
-/*   Updated: 2017/07/25 09:39:17 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 00:10:54 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ t_square	*ft_find_bis(t_obst **list, int *t1, int *t2, t_square *res)
 	i = 1;
 	h = res->y;
 	k = res->x;
-	res->size = 1;
+	res->size = 0;
 	res->x = 0;
 	res->y = 0;
 	while (i < h)
@@ -81,12 +81,14 @@ int			find_it(t_obst **l, int *t1, int *t2, t_square *res)
 	int		j;
 	t_obst	*list;
 
+	write (1,"gox\n",4);// test
 	list = *l;
 	i = 1;
 	j = -1;
 	while (++j < res->x)
 		t1[j] = 1;
-	while (list->y == 0)
+
+	while (list->y == 0 && list->next)
 	{
 		t1[list->x] = 0;
 		list = list->next;
