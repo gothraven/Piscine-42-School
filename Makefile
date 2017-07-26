@@ -6,7 +6,7 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/19 04:20:22 by szaghban          #+#    #+#              #
-#    Updated: 2017/07/25 10:09:45 by szaghban         ###   ########.fr        #
+#    Updated: 2017/07/26 06:07:59 by szaghban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,3 +39,6 @@ fclean: clean
 	@/bin/rm -f $(NAME)
 
 re: fclean all
+
+norme: fclean
+	@norminette *.c */*.h */*.c

@@ -6,13 +6,13 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 06:34:57 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/25 07:08:45 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 06:14:36 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-static int		 ft_strlen(char *str)
+static int		ft_strlen(char *str)
 {
 	char		*s;
 
@@ -24,7 +24,7 @@ static int		 ft_strlen(char *str)
 
 static char		*ft_strncpy(char *dest, char *src, int n)
 {
-	int           i;
+	int			i;
 
 	i = 0;
 	while (src[i] != '\0' && i < n)
@@ -39,8 +39,8 @@ static char		*ft_strncpy(char *dest, char *src, int n)
 
 static char		*add_to_line(char *line, int treat, char *buff, int *start)
 {
-	char          *newlen;
-	int           oldlen;
+	char		*newlen;
+	int			oldlen;
 
 	if (line != 0)
 		oldlen = ft_strlen(line);
@@ -61,11 +61,11 @@ static char		*add_to_line(char *line, int treat, char *buff, int *start)
 
 char			*get_next_line(const int fd)
 {
-	static char   buff[MEM_SIZE];
-	static int    nbinbuff = 0;
-	static int    start;
-	int           treat;
-	char          *line;
+	static char		buff[MEM_SIZE];
+	static int		nbinbuff = 0;
+	static int		start;
+	int				treat;
+	char			*line;
 
 	line = 0;
 	treat = 0;
@@ -87,4 +87,3 @@ char			*get_next_line(const int fd)
 		treat = treat + 1;
 	}
 }
-
