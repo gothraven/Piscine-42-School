@@ -6,13 +6,13 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 08:18:39 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 03:28:08 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 04:30:12 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-int			read_it(char *fname, int **obst, t_map *map)
+int			read_it(char *fname, int *obst, t_map *map)
 {
 	char		*str;
 	int			i;
@@ -24,7 +24,7 @@ int			read_it(char *fname, int **obst, t_map *map)
 	map_it(map, str);
 	str = get_next_line(fd);
 	map->width = strlen(str);
-	*obst = (int *)malloc((map->width * map->height) * sizeof(int));
+	obst = (int *)malloc((map->width * map->height) * sizeof(int));
 	convert_it(obst, str, i, map);
 	free(str);
 	i++;
