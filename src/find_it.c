@@ -6,7 +6,7 @@
 /*   By: anyahyao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 07:40:42 by anyahyao          #+#    #+#             */
-/*   Updated: 2017/07/26 01:59:07 by anyahyao         ###   ########.fr       */
+/*   Updated: 2017/07/26 02:40:01 by anyahyao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int			min(int a, int b, int c)
 {
-	if (a < b)
+	if (a <= b)
 	{
-		if (a < c)
+		if (a <= c)
 			return (a);
 		return (c);
 	}
@@ -25,37 +25,37 @@ int			min(int a, int b, int c)
 	return (b);
 }
 
-t_square	*ft_find_bis(t_obst **list, int *t1, int *t2, t_square *res)
+int		ft_find_bis(int *tab, int *t1, int *t2, t_square *res)
 {
 	int		j;
 	int		h;
 	int		i;
 	int		k;
+	int		pos;
 	int		*swp;
-	t_obst	*l;
 
-	l = *list;
 	i = 1;
 	h = res->y;
 	k = res->x;
-	res->size = 1;
+	res->size = 0;
 	res->x = 0;
 	res->y = 0;
+	pos = 0;
 	while (i < h)
 	{
 		j = 1;
 		t2[0] = 1;
-		if (l->x == 0 && l->y == i)
+		if (tab[pos] % k == 0 && tab[pos] / k == i)
 		{
 			t2[0] = 0;
-			l = l->next;
+			pos++;
 		}
 		while (j < k)
 		{
-			if (l->x == j && l->y == i)
+			if (tab[pos] % k == j && tab[pos] / k == i)
 			{
 				t2[j] = 0;
-				l = l->next;
+				pos++;
 			}
 			else
 				t2[j] = min(t2[j - 1], t1[j], t1[j - 1]) + 1;
@@ -72,7 +72,7 @@ t_square	*ft_find_bis(t_obst **list, int *t1, int *t2, t_square *res)
 		}
 		i++;
 	}
-	return (res);
+	return (res->size);
 }
 
 int			find_it(int *tab, int *t1, int *t2, t_square *res)
@@ -81,19 +81,19 @@ int			find_it(int *tab, int *t1, int *t2, t_square *res)
 	int		j;
 	int		pos;
 
-	list = *l;
 	i = 1;
 	j = -1;
-	pos = -1;
-	if (tab[++pos] < res->x)
+	pos = 0;
+	while (++j < res->x)
 	{
-		while (++j < res->x)
+		if (tab[pos] == j)
+		{
+			t1[j] = 0;
+			pos++;
+		}
+		else
 			t1[j] = 1;
-		while (l[++o]->x >  0)
-			t1[l[o]->x] = 0;
-		res->size = 0;
 	}
-	else
-		ft_find_bis(l, t1, t2, res);
+	ft_find_bis(&tab[pos], t1, t2, res);
 	return (res->size);
 }
