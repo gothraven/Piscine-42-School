@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 09:07:46 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 06:28:24 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 07:07:50 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int		solve_it(char *fname)
 	obst = (int**)malloc(sizeof(int*));
 	*obst = NULL;
 	map = (t_map*)malloc(sizeof(t_map*));
-	read_it(fname, obst, map);
+	if (!read_it(fname, obst, map))
+		return (0);
 	t1 = (int*)malloc(map->width * sizeof(int));
 	t2 = (int*)malloc(map->width * sizeof(int));
 	square = (t_square*)malloc(sizeof(t_square*));

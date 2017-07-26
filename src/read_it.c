@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 08:18:39 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 06:24:58 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 07:04:04 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,15 @@ int			read_it(char *fname, int **obst, t_map *map)
 	str = get_next_line(fd);
 	map->width = strlen(str);
 	obstt = (int *)malloc((map->width * map->height) * sizeof(int*));
+	if (!verify_it(str, map))
+		return (0);
 	convert_it(obstt, str, 0, map);
 	free(str);
 	i = 1;
 	while ((str = get_next_line(fd)) && i < map->height - 1)
 	{
+		if (!verify_it(str, map))
+			return (0);
 		pos = convert_it(obstt, str, i, map);
 		free(str);
 		i++;
