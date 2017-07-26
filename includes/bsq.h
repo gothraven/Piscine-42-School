@@ -6,15 +6,13 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 00:02:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 22:30:58 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 22:43:41 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BSQ_H
 # define BSQ_H
 
-# include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <fcntl.h>
