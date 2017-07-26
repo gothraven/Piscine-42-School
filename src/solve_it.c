@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 09:07:46 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 05:19:11 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 06:11:23 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		solve_it(char *fname)
 	square->x = map->width;
 	square->y = map->height;
 	if (find_it(*obst, t1, t2, square))
-		return show_it(square, *obst, map);
+		return (show_it(square, *obst, map));
 	else
 		return (0);
 }
