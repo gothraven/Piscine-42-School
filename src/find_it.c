@@ -6,13 +6,13 @@
 /*   By: anyahyao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 07:40:42 by anyahyao          #+#    #+#             */
-/*   Updated: 2017/07/26 02:40:01 by anyahyao         ###   ########.fr       */
+/*   Updated: 2017/07/26 02:44:37 by anyahyao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-int			min(int a, int b, int c)
+int		min(int a, int b, int c)
 {
 	if (a <= b)
 	{
@@ -75,7 +75,7 @@ int		ft_find_bis(int *tab, int *t1, int *t2, t_square *res)
 	return (res->size);
 }
 
-int			find_it(int *tab, int *t1, int *t2, t_square *res)
+int		find_it(int *tab, int *t1, int *t2, t_square *res)
 {
 	int		i;
 	int		j;
