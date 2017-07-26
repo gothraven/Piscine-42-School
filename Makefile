@@ -6,7 +6,7 @@
 #    By: szaghban <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/19 04:20:22 by szaghban          #+#    #+#              #
-#    Updated: 2017/07/26 11:25:49 by szaghban         ###   ########.fr        #
+#    Updated: 2017/07/26 18:55:40 by anyahyao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRC := src/
 INCLUDES := includes/
 CACHE := cache/
 FUNS := getnextline convert_it file_it find_it read_it solve_it verify_it map_it \
-	show_it ft_atoi ft_strcmp free_it
+	show_it ft_atoi ft_strcmp free_it utile
 MAIN := main.c
 FLAGS := -Wall -Wextra -Werror
 INCF = -I $(INCLUDES)
