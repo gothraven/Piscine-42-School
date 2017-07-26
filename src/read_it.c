@@ -6,30 +6,27 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 08:18:39 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 07:04:04 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 08:49:08 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-int			read_it(char *fname, int **obst, t_map *map)
+int			read_it(int fd, int **obst, t_map *map)
 {
 	char		*str;
 	int			i;
-	int			fd;
 	int			pos;
 	int			*obstt;
 
-	fd = open_it(fname);
 	str = get_next_line(fd);
 	map_it(map, str);
 	str = get_next_line(fd);
-	map->width = strlen(str);
+	map->width = ft_strlen(str);
 	obstt = (int *)malloc((map->width * map->height) * sizeof(int*));
 	if (!verify_it(str, map))
 		return (0);
 	convert_it(obstt, str, 0, map);
-	free(str);
 	i = 1;
 	while ((str = get_next_line(fd)) && i < map->height - 1)
 	{

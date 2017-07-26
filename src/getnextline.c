@@ -6,13 +6,13 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 06:34:57 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 06:14:36 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 08:50:11 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-static int		ft_strlen(char *str)
+int				ft_strlen(char *str)
 {
 	char		*s;
 

@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/25 05:05:35 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 08:49:48 by szaghban         ###   ########.fr       */
+/*   Created: 2017/07/07 11:16:53 by szaghban          #+#    #+#             */
+/*   Updated: 2017/07/26 08:26:53 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-int		main(int argc, char *argv[])
+int		ft_atoi(char *str)
 {
+	int sign;
+	int result;
 	int i;
 
-	if (argc > 1)
+	sign = 0;
+	i = 0;
+	result = 0;
+	while ((str[i] == ' ') || (str[i] == '\n') || (str[i] == '\r')
+			|| (str[i] == '\t') || (str[i] == '\v') || (str[i] == '\f'))
+		i++;
+	if (str[i] == '-')
+		sign++;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		i = 1;
-		while (argv[i])
-		{
-			if (!solve_it(argv[i]))
-				write(1, ERROR, ft_strlen(ERROR));
-			i++;
-		}
+		result *= 10;
+		result += ((int)str[i] - '0');
+		i++;
 	}
+	if (sign)
+		return (-result);
 	else
-	{
-		if (!solve_it(""))
-			write(1, ERROR, ft_strlen(ERROR));
-	}
-	return (0);
+		return (result);
 }

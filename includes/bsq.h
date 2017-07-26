@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 00:02:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 06:10:07 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 08:45:09 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <fcntl.h>
 
 # define MEM_SIZE 4096
+# define ERROR "map error\n"
 
 typedef struct		s_square
 {
@@ -43,11 +44,13 @@ int					show_it(t_square *square, int *obst, t_map *map);
 int					find_it(int *obst, int *t1, int *t2, t_square *square);
 int					verify_it(char *str, t_map *map);
 int					convert_it(int *obst, char *str, int y, t_map *map);
-int					read_it(char *fname, int **obst, t_map *map);
+int					read_it(int fd, int **obst, t_map *map);
 int					close_it(int fd);
 int					open_it(char *fname);
+int					ft_strlen(char *str);
 void				ft_putchar(char c);
 void				ft_putstr(char *str);
 char				*get_next_line(const int fd);
+int					ft_atoi(char *str);
 
 #endif
