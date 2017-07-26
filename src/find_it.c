@@ -6,7 +6,7 @@
 /*   By: anyahyao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 07:40:42 by anyahyao          #+#    #+#             */
-/*   Updated: 2017/07/26 10:01:31 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 10:33:09 by anyahyao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,11 +76,11 @@ int		ft_find_bis(int *tab, int *t1, int *t2, t_square *res)
 				res->y = i;
 				res->size = t2[j];
 			}
-			swp = t1;
-			t1 = t2;
-			t2 = swp;
 			j++;
 		}
+		swp = t1;
+		t1 = t2;
+		t2 = swp;
 		i++;
 	}
 	return (res->size);
