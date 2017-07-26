@@ -6,7 +6,7 @@
 /*   By: anyahyao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 07:40:42 by anyahyao          #+#    #+#             */
-/*   Updated: 2017/07/26 21:15:51 by anyahyao         ###   ########.fr       */
+/*   Updated: 2017/07/26 22:31:24 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,6 @@ int		find_it(int *tab, int *t1, int *t2, t_square *res)
 	j = -1;
 	pos = 0;
 	res->size = 0;
-	printf("resx%d y%d \n",res->x,res->y);
 	while (++j < res->x)
 	{
 		if (tab[pos] == j)
@@ -101,7 +100,5 @@ int		find_it(int *tab, int *t1, int *t2, t_square *res)
 			t1[j] = 1;
 	}
 	ft_find_bis(&tab[pos], t1, t2, res);
-	printf("res%d \n",res->size);
-	
 	return (res->size);
 }

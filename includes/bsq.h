@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 00:02:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 22:20:01 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 22:30:58 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,7 @@ int					free_it(int **obst, t_map *map,
 int					free_ts(int *t1, int *t2);
 int					fit_it(int fd, char *str, int i, t_map *map);
 void				read_norme(int fd, int pos, int **obstt, int *obst);
+int					min(int a, int b, int c);
+int					ft_swap(int **t1, int **t2, int a);
 
 #endif
