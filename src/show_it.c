@@ -6,23 +6,23 @@
 /*   By: anyahyao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 09:43:48 by anyahyao          #+#    #+#             */
-/*   Updated: 2017/07/26 06:28:59 by anyahyao         ###   ########.fr       */
+/*   Updated: 2017/07/26 06:33:57 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-int		show_it(int j, char *str, t_map *m, int i)
+int		show_bis(int j, char *str, t_map *m, int i)
 {
 	str[j] = '\n';
 	str[j + 1] = '\0';
 	write(1, str, m->width + 1);
-	return (i);
+	return (i + 1);
 }
 
 char	norm(t_map *m, int *pos)
 {
-	*pos = pos + 1;
+	*pos = *pos + 1;
 	return (m->obst);
 }
 
