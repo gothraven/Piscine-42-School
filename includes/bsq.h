@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 00:02:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 08:45:09 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 10:34:57 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ void				ft_putchar(char c);
 void				ft_putstr(char *str);
 char				*get_next_line(const int fd);
 int					ft_atoi(char *str);
+int					ft_strcmp(char *s1, char *s2);
 
 #endif

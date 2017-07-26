@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 08:18:39 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 09:57:31 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 10:35:57 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int			read_it(int fd, int **obst, t_map *map)
 		free(str);
 		i++;
 	}
+	if (str || i != map->height)
+		return (0);
 	obstt[pos] = -1;
 	*obst = obstt;
 	return (close_it(fd));

@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/25 05:05:35 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 10:35:24 by szaghban         ###   ########.fr       */
+/*   Created: 2017/07/12 15:47:14 by szaghban          #+#    #+#             */
+/*   Updated: 2017/07/12 15:55:12 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bsq.h"
-
-int		main(int argc, char *argv[])
+int		ft_strcmp(char *s1, char *s2)
 {
 	int i;
 
-	if (argc > 1)
-	{
-		i = 1;
-		while (argv[i])
-		{
-			if (!solve_it(argv[i]))
-				write(1, ERROR, ft_strlen(ERROR));
-			i++;
-		}
-	}
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	if (!s1[i] && !s2[i])
+		return (0);
 	else
-	{
-		if (!solve_it("stdin"))
-			write(1, ERROR, ft_strlen(ERROR));
-	}
-	return (0);
+		return ((int)(s1[i] - s2[i]));
 }
