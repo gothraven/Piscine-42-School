@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 00:02:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 11:31:58 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 22:20:01 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,8 @@ int					ft_atoi(char *str);
 int					ft_strcmp(char *s1, char *s2);
 int					free_it(int **obst, t_map *map,
 		t_square *square, int status);
+int					free_ts(int *t1, int *t2);
+int					fit_it(int fd, char *str, int i, t_map *map);
+void				read_norme(int fd, int pos, int **obstt, int *obst);
 
 #endif

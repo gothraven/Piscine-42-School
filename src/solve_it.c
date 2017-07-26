@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 09:07:46 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 15:31:53 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 22:26:24 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ int		solve_it(char *fname)
 	square = (t_square*)malloc(sizeof(t_square*));
 	square->x = map->width;
 	square->y = map->height;
-	if (find_it(*obst, t1, t2, square))
-		return (free_it(obst, map, square, show_it(square, *obst, map)));
-	else
-		return (free_it(obst, map, square, 0));
+	find_it(*obst, t1, t2, square);
+	free_ts(t1, t2);
+	return (free_it(obst, map, square, show_it(square, *obst, map)));
 }
