@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 08:21:41 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 10:35:03 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 23:07:22 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int		open_it(char *fname)
 
 int		close_it(int fd)
 {
+	if (fd == 0)
+		return (1);
 	if (close(fd) == -1)
 		return (0);
 	else

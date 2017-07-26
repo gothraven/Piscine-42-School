@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 05:05:35 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 10:35:24 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 23:15:55 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int		main(int argc, char *argv[])
 		{
 			if (!solve_it(argv[i]))
 				write(1, ERROR, ft_strlen(ERROR));
+			if (argc > 2)
+				write(1, "\n", 1);
 			i++;
 		}
 	}
