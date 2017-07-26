@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 00:02:51 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 01:57:33 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 02:23:18 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,6 @@ typedef struct	s_square
 	int			y;
 }				t_square;
 
-typedef struct	s_obst
-{
-	int					x;
-	int					y;
-	struct s_obst		*next;
-}						t_obst;
-
 typedef struct		s_map
 {
 	int		height;
@@ -44,17 +37,13 @@ typedef struct		s_map
 	char	full;
 }					t_map;
 
-void			push_in(t_obst **list, int x, int y);
 int				solve_it(char *fname);
 void			map_it(t_map *map, char *str);
-int				show_it(t_square *square, t_obst *list, t_map *map);
-int				find_it(t_obst **list, int *t1, int *t2, t_square *square);
+int				show_it(t_square *square, int *obst, t_map *map);
+int				find_it(int *list, int *t1, int *t2, t_square *square);
 int				verify_it(char *str, t_map *map);
-t_obst			*ft_create_elem(int x, int y);
-void			push_in(t_obst **list, int x, int y);
-void			convert_it(t_obst **list, char *str, int x, char obst);
-void			map_it(t_map *map, char *str);
-int				read_it(char *fname, t_obst **list, t_map *map);
+void			convert_it(int **obst, char *str, int x, t_map *map);
+int				read_it(char *fname, int **obst, t_map *map);
 int				close_it(int fd);
 int				open_it(char *fname);
 void			ft_putchar(char c);
