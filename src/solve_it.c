@@ -6,11 +6,23 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 09:07:46 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 09:11:30 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 09:59:57 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
+
+void	show_obst(int *obst)
+{
+	int i;
+
+	i = 0;
+	while (obst[i] != -1)
+	{
+		printf("(%d) ",obst[i]);
+		i++;
+	}
+}
 
 int		solve_it(char *fname)
 {

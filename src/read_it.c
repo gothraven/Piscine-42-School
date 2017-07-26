@@ -6,7 +6,7 @@
 /*   By: szaghban <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 08:18:39 by szaghban          #+#    #+#             */
-/*   Updated: 2017/07/26 08:49:08 by szaghban         ###   ########.fr       */
+/*   Updated: 2017/07/26 09:57:31 by szaghban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int			read_it(int fd, int **obst, t_map *map)
 		return (0);
 	convert_it(obstt, str, 0, map);
 	i = 1;
-	while ((str = get_next_line(fd)) && i < map->height - 1)
+	while ((str = get_next_line(fd)) && i < map->height)
 	{
 		if (!verify_it(str, map))
 			return (0);
